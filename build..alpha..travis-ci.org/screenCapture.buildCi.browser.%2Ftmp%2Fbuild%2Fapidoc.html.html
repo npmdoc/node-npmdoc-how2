@@ -1,0 +1,1570 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/santinic/how2">how2 (v1.5.0)</a>
+</h1>
+<h4>Uses Google and Stackoverflow to find how to do things on a Unix commmand line</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.how2">module how2</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan"></span>how2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">how2.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">how2.</span>parser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">how2.</span>ui</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">how2.</span>updates</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">how2.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.how2.config">module how2.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.Argv">
+            function <span class="apidocSignatureSpan">how2.config.</span>Argv
+            <span class="apidocSignatureSpan">(options, usage)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.Env">
+            function <span class="apidocSignatureSpan">how2.config.</span>Env
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.File">
+            function <span class="apidocSignatureSpan">how2.config.</span>File
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.Literal">
+            function <span class="apidocSignatureSpan">how2.config.</span>Literal
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.Memory">
+            function <span class="apidocSignatureSpan">how2.config.</span>Memory
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.Provider">
+            function <span class="apidocSignatureSpan">how2.config.</span>Provider
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.key">
+            function <span class="apidocSignatureSpan">how2.config.</span>key
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.loadFiles">
+            function <span class="apidocSignatureSpan">how2.config.</span>loadFiles
+            <span class="apidocSignatureSpan">(files, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.loadFilesSync">
+            function <span class="apidocSignatureSpan">how2.config.</span>loadFilesSync
+            <span class="apidocSignatureSpan">(files)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.config.path">
+            function <span class="apidocSignatureSpan">how2.config.</span>path
+            <span class="apidocSignatureSpan">(key, separator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">how2.config.</span>formats</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">how2.config.</span>sources</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">how2.config.</span>stores</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">how2.config.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.how2.how2">module how2.how2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.how2.magic">
+            function <span class="apidocSignatureSpan">how2.how2.</span>magic
+            <span class="apidocSignatureSpan">(text, lang)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.how2.main">
+            function <span class="apidocSignatureSpan">how2.how2.</span>main
+            <span class="apidocSignatureSpan">(text, lang, remember)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.how2.search">
+            function <span class="apidocSignatureSpan">how2.how2.</span>search
+            <span class="apidocSignatureSpan">(text, lang, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.how2.parser">module how2.parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.parser.parseBody">
+            function <span class="apidocSignatureSpan">how2.parser.</span>parseBody
+            <span class="apidocSignatureSpan">(buffer, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.how2.ui">module how2.ui</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.ui.magicSelect">
+            function <span class="apidocSignatureSpan">how2.ui.</span>magicSelect
+            <span class="apidocSignatureSpan">(rows)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.ui.showAnswer">
+            function <span class="apidocSignatureSpan">how2.ui.</span>showAnswer
+            <span class="apidocSignatureSpan">(answer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.ui.showAnswers">
+            function <span class="apidocSignatureSpan">how2.ui.</span>showAnswers
+            <span class="apidocSignatureSpan">(answers, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.ui.showGoogleList">
+            function <span class="apidocSignatureSpan">how2.ui.</span>showGoogleList
+            <span class="apidocSignatureSpan">(links, titles, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.ui.showGoogling">
+            function <span class="apidocSignatureSpan">how2.ui.</span>showGoogling
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.ui.start">
+            function <span class="apidocSignatureSpan">how2.ui.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.ui.stop">
+            function <span class="apidocSignatureSpan">how2.ui.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.how2.updates">module how2.updates</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.updates.checkForUpdates">
+            function <span class="apidocSignatureSpan">how2.updates.</span>checkForUpdates
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.updates.getResult">
+            function <span class="apidocSignatureSpan">how2.updates.</span>getResult
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.how2.utils">module how2.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.utils.isValidGoogleLink">
+            function <span class="apidocSignatureSpan">how2.utils.</span>isValidGoogleLink
+            <span class="apidocSignatureSpan">(link)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.utils.marked">
+            function <span class="apidocSignatureSpan">how2.utils.</span>marked
+            <span class="apidocSignatureSpan">(src, opt, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.utils.parseStackoverflowQuestionId">
+            function <span class="apidocSignatureSpan">how2.utils.</span>parseStackoverflowQuestionId
+            <span class="apidocSignatureSpan">(link)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.utils.stripStackOverflow">
+            function <span class="apidocSignatureSpan">how2.utils.</span>stripStackOverflow
+            <span class="apidocSignatureSpan">(title)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.how2.utils.toEscapedMarkdown">
+            function <span class="apidocSignatureSpan">how2.utils.</span>toEscapedMarkdown
+            <span class="apidocSignatureSpan">(markdown)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.how2" id="apidoc.module.how2">module how2</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.how2.config" id="apidoc.module.how2.config">module how2.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.Argv" id="apidoc.element.how2.config.Argv">
+        function <span class="apidocSignatureSpan">how2.config.</span>Argv
+        <span class="apidocSignatureSpan">(options, usage)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Argv = function (options, usage) {
+  Memory.call(this, options);
+
+  this.type     = 'argv';
+  this.readOnly = true;
+  this.options  = options || false;
+  this.usage    = usage;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.Env" id="apidoc.element.how2.config.Env">
+        function <span class="apidocSignatureSpan">how2.config.</span>Env
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Env = function (options) {
+  Memory.call(this, options);
+
+  options        = options || {};
+  this.type      = 'env';
+  this.readOnly  = true;
+  this.whitelist = options.whitelist || [];
+  this.separator = options.separator || '';
+  this.lowerCase = options.lowerCase || false;
+
+  if (({}).toString.call(options.match) === '[object RegExp]'
+      &amp;&amp; typeof options !== 'string') {
+    this.match = options.match;
+  }
+
+  if (options instanceof Array) {
+    this.whitelist = options;
+  }
+  if (typeof(options) === 'string') {
+    this.separator = options;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.File" id="apidoc.element.how2.config.File">
+        function <span class="apidocSignatureSpan">how2.config.</span>File
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">File = function (options) {
+  if (!options || !options.file) {
+    throw new Error ('Missing required option `file`');
+  }
+
+  Memory.call(this, options);
+
+  this.type    = 'file';
+  this.file    = options.file;
+  this.dir     = options.dir    || process.cwd();
+  this.format  = options.format || formats.json;
+  this.secure  = options.secure;
+  this.spacing = options.json_spacing
+    || options.spacing
+    || 2;
+
+  if (this.secure) {
+    this.secure = Buffer.isBuffer(this.secure) || typeof this.secure === 'string'
+      ? { secret: this.secure.toString() }
+      : this.secure;
+
+    this.secure.alg = this.secure.alg || 'aes-256-ctr';
+    if (this.secure.secretPath) {
+      this.secure.secret = fs.readFileSync(this.secure.secretPath, 'utf8');
+    }
+
+    if (!this.secure.secret) {
+      throw new Error('secure.secret option is required');
+    }
+
+    this.keys = new Secure({
+      secret: this.secure.secret,
+      alg: this.secure.alg,
+      format: this.format
+    });
+  }
+
+  if (options.search) {
+    this.search(this.dir);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.Literal" id="apidoc.element.how2.config.Literal">
+        function <span class="apidocSignatureSpan">how2.config.</span>Literal
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Literal(options) {
+  Memory.call(this, options);
+
+  options       = options || {}
+  this.type     = 'literal';
+  this.readOnly = true;
+  this.store    = options.store || options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.Memory" id="apidoc.element.how2.config.Memory">
+        function <span class="apidocSignatureSpan">how2.config.</span>Memory
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Memory = function (options) {
+  options       = options || {};
+  this.type     = 'memory';
+  this.store    = {};
+  this.mtimes   = {};
+  this.readOnly = false;
+  this.loadFrom = options.loadFrom || null;
+  this.logicalSeparator = options.logicalSeparator || ':';
+
+  if (this.loadFrom) {
+    this.store = common.loadFilesSync(this.loadFrom);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.Provider" id="apidoc.element.how2.config.Provider">
+        function <span class="apidocSignatureSpan">how2.config.</span>Provider
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Provider = function (options) {
+  //
+  // Setup default options for working with `stores`,
+  // `overrides`, `process.env` and `process.argv`.
+  //
+  options       = options || {};
+  this.stores  = {};
+  this.sources = [];
+  this.init(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.key" id="apidoc.element.how2.config.key">
+        function <span class="apidocSignatureSpan">how2.config.</span>key
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">key = function () {
+  return Array.prototype.slice.call(arguments).join(':');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+updates.checkForUpdates();
+
+screen = blessed.screen({
+    smartCSR: true,
+    autoPadding: true
+});
+
+screen.<span class="apidocCodeKeywordSpan">key</span>(['C-c'], function(ch, key) {
+    exit();
+});
+
+var logText =
+    colors.bgBlue.white.bold(' Enter/Space ')+' open link '+
+    colors.bgBlue.white.bold(' B ') + ' open browser '+
+    colors.bgBlue.white.bold(' Esc ') + ' close window';
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.loadFiles" id="apidoc.element.how2.config.loadFiles">
+        function <span class="apidocSignatureSpan">how2.config.</span>loadFiles
+        <span class="apidocSignatureSpan">(files, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadFiles = function (files, callback) {
+  if (!files) {
+    return callback(null, {});
+  }
+
+  var options = Array.isArray(files) ? { files: files } : files;
+
+  //
+  // Set the default JSON format if not already
+  // specified
+  //
+  options.format = options.format || formats.json;
+
+  function parseFile (file, next) {
+    fs.readFile(file, function (err, data) {
+      return !err
+        ? next(null, options.format.parse(data.toString()))
+        : next(err);
+    });
+  }
+
+  async.map(options.files, parseFile, function (err, objs) {
+    return err ? callback(err) : callback(null, common.merge(objs));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.loadFilesSync" id="apidoc.element.how2.config.loadFilesSync">
+        function <span class="apidocSignatureSpan">how2.config.</span>loadFilesSync
+        <span class="apidocSignatureSpan">(files)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadFilesSync = function (files) {
+  if (!files) {
+    return;
+  }
+
+  //
+  // Set the default JSON format if not already
+  // specified
+  //
+  var options = Array.isArray(files) ? { files: files } : files;
+  options.format = options.format || formats.json;
+
+  return common.merge(options.files.map(function (file) {
+    return options.format.parse(fs.readFileSync(file, 'utf8'));
+  }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.config.path" id="apidoc.element.how2.config.path">
+        function <span class="apidocSignatureSpan">how2.config.</span>path
+        <span class="apidocSignatureSpan">(key, separator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">path = function (key, separator) {
+  separator = separator || ':';
+  return key == null ? [] : key.split(separator);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.how2.how2" id="apidoc.module.how2.how2">module how2.how2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.how2.how2.magic" id="apidoc.element.how2.how2.magic">
+        function <span class="apidocSignatureSpan">how2.how2.</span>magic
+        <span class="apidocSignatureSpan">(text, lang)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function magic(text, lang) {
+    var colors = require('colors/safe');
+
+    function selectedAnswer(titles, answers, index, remember) {
+        if(answers.length === 0) {
+            log.error('Cannot find any reasonable answer for your query.');
+            if(!lang) {
+                console.log('To get the best answers, make sure you specify the language with '+ colors.blue('-l:'));
+                console.log('example: $ how2 '+colors.blue('-l python') +' permutations list');
+                console.log('example: $ how2 '+colors.blue('-l ruby') + ' permutations list');
+            }
+            process.exit(1);
+        }
+
+        var markdown = utils.toEscapedMarkdown(answers[index].body_markdown);
+
+        var title = titles[index];
+        console.log(colors.underline.green(title+'\n'));
+        console.log(markdown);
+
+        console.log('Press SPACE for more choices, any other key to quit.');
+        require('keypress')(process.stdin);
+        process.stdin.setRawMode(true);
+        process.stdin.on('keypress', onKeypress);
+
+        function onKeypress(ch, key) {
+            if(key) {
+                if(key.name === 'space') {
+                    process.stdin.removeListener('keypress', onKeypress);
+                    return main(text, lang, remember);
+                }
+                else {
+                    process.exit(0);
+                }
+            }
+        }
+    }
+
+    search(text, lang, function(links, titles) {
+        var selectItem = selectedGoogleItemCallback(links, function(answers){
+            spinner.stop();
+            var remember = { links: links, titles: titles };
+            selectedAnswer(titles, answers, 0, remember);
+        });
+        selectItem(0);
+    });
+    spinner.start(spinnerOptions);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var how2 = require('./how2');
+
+if(argv.i) {
+    how2.main(text, argv.l);
+}
+else {
+    how2.<span class="apidocCodeKeywordSpan">magic</span>(text, argv.l);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.how2.main" id="apidoc.element.how2.how2.main">
+        function <span class="apidocSignatureSpan">how2.how2.</span>main
+        <span class="apidocSignatureSpan">(text, lang, remember)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function main(text, lang, remember) {
+    ui.start();
+    spinner.start(spinnerOptions);
+
+    function afterSearch(links, titles){
+        spinner.stop();
+        ui.showGoogleList(links, titles, selectedGoogleItemCallback(links, function(answers) {
+            ui.showAnswers(answers, function(index) {
+                var selected = answers[index];
+                if (selected) {
+                    ui.showAnswer(selected);
+                }
+            });
+        }));
+    }
+
+    if(!remember) {
+        search(text, lang, afterSearch);
+    }
+    else {
+        afterSearch(remember.links, remember.titles);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if(!argv.l){
+    checkTextContainsLang(text);
+}
+
+var how2 = require('./how2');
+
+if(argv.i) {
+    how2.<span class="apidocCodeKeywordSpan">main</span>(text, argv.l);
+}
+else {
+    how2.magic(text, argv.l);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.how2.search" id="apidoc.element.how2.how2.search">
+        function <span class="apidocSignatureSpan">how2.how2.</span>search
+        <span class="apidocSignatureSpan">(text, lang, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function search(text, lang, callback) {
+    return searchGoogle(text, lang, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.how2.parser" id="apidoc.module.how2.parser">module how2.parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.how2.parser.parseBody" id="apidoc.element.how2.parser.parseBody">
+        function <span class="apidocSignatureSpan">how2.parser.</span>parseBody
+        <span class="apidocSignatureSpan">(buffer, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseBody(buffer, callback) {
+  zlib.unzip(buffer, function Unzipped (error, body) {
+    try {
+      callback(error, JSON.parse(body.toString()));
+    } catch (error) {
+      callback(error);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.how2.ui" id="apidoc.module.how2.ui">module how2.ui</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.how2.ui.magicSelect" id="apidoc.element.how2.ui.magicSelect">
+        function <span class="apidocSignatureSpan">how2.ui.</span>magicSelect
+        <span class="apidocSignatureSpan">(rows)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function magicSelect(rows) {
+    screen = blessed.screen({
+        autoPadding: true
+    });
+    var list = blessed.list({
+    });
+    list.setItems(rows);
+    screen.append(list);
+    screen.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.ui.showAnswer" id="apidoc.element.how2.ui.showAnswer">
+        function <span class="apidocSignatureSpan">how2.ui.</span>showAnswer
+        <span class="apidocSignatureSpan">(answer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function showAnswer(answer) {
+    var text = utils.toEscapedMarkdown(answer.body_markdown);
+
+    var answerBox = blessed.box({
+        top: 'center',
+        left: 'center',
+        width: '80%',
+        height: '80%',
+        border: {
+            type: 'line',
+        },
+        padding : 1,
+        scrollable: true,
+        alwaysScroll: true,
+        scrollbar: {
+            border: {
+                bg: 'yellow'
+            },
+            bg: 'yellow'
+        },
+        keys: true,
+        vi: true,
+        // mouse: true
+    });
+
+    answerBox.setContent(text);
+
+    answerBox.key(['escape', 'q'], function() {
+        screen.remove(answerBox);
+        answersList.focus();
+        screen.render();
+    });
+
+    screen.append(answerBox);
+    answerBox.focus();
+    screen.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function afterSearch(links, titles){
+    spinner.stop();
+    ui.showGoogleList(links, titles, selectedGoogleItemCallback(links, function(answers) {
+        ui.showAnswers(answers, function(index) {
+            var selected = answers[index];
+            if (selected) {
+                ui.<span class="apidocCodeKeywordSpan">showAnswer</span>(selected);
+            }
+        });
+    }));
+}
+
+if(!remember) {
+    search(text, lang, afterSearch);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.ui.showAnswers" id="apidoc.element.how2.ui.showAnswers">
+        function <span class="apidocSignatureSpan">how2.ui.</span>showAnswers
+        <span class="apidocSignatureSpan">(answers, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function showAnswers(answers, callback) {
+    var listBox = blessed.box({
+        top: 'center',
+        left: 'center',
+        width: '90%',
+        height: '90%',
+        border: {
+            type: 'line',
+        },
+        tags: true,
+    });
+
+    var listOptions = {
+        parent: listBox,
+        border: {
+            type: 'bg',
+        },
+    };
+    _.extend(listOptions, listStyle());
+    answersList = blessed.list(listOptions);
+
+    answersList.setItems(answers.map(makeTitleForAnswer));
+
+    answersList.on('select', function() {
+        callback(this.selected);
+    });
+
+    answersList.key(['space', 'o'], function() {
+        answersList.enterSelected();
+        screen.render();
+    });
+
+    answersList.key(['b'], function(event) {
+        var answer = answers[this.selected];
+        require('openurl').open(answer.link);
+    });
+
+    answersList.key(['escape', 'q'], function() {
+        screen.remove(listBox);
+        googleList.focus();
+        screen.render();
+    });
+
+    listBox.append(answersList);
+    answersList.focus();
+    screen.append(listBox);
+    screen.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function main(text, lang, remember) {
+ui.start();
+spinner.start(spinnerOptions);
+
+function afterSearch(links, titles){
+    spinner.stop();
+    ui.showGoogleList(links, titles, selectedGoogleItemCallback(links, function(answers) {
+        ui.<span class="apidocCodeKeywordSpan">showAnswers</span>(answers, function(index) {
+            var selected = answers[index];
+            if (selected) {
+                ui.showAnswer(selected);
+            }
+        });
+    }));
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.ui.showGoogleList" id="apidoc.element.how2.ui.showGoogleList">
+        function <span class="apidocSignatureSpan">how2.ui.</span>showGoogleList
+        <span class="apidocSignatureSpan">(links, titles, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function showGoogleList(links, titles, callback) {
+    var options = {
+        parent: screen,
+        width: '100%',
+        height: '100%-1',
+        top: 'center',
+        left: 'center',
+        padding: 1,
+        title: 'Select Answer:',
+        // mouse: true
+    };
+    _.extend(options, listStyle());
+    googleList = blessed.list(options);
+
+    googleList.setItems(titles);
+
+    googleList.prepend(new blessed.Text({
+        content: 'Select one code tip:'
+    }));
+
+    googleList.on('select', function(event) {
+        callback(this.selected);
+    });
+
+    googleList.key(['space', 'o'], function() {
+        googleList.enterSelected();
+        screen.render();
+    });
+
+    googleList.key(['escape', 'q'], function() {
+        exit();
+    });
+
+    googleList.key(['b'], function() {
+        var link = links[this.selected];
+        try {
+            require('openurl').open(link.link);
+        }
+        catch(e) {}
+    });
+
+    googleList.select(0);
+    googleList.focus();
+    screen.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function main(text, lang, remember) {
+ui.start();
+spinner.start(spinnerOptions);
+
+function afterSearch(links, titles){
+    spinner.stop();
+    ui.<span class="apidocCodeKeywordSpan">showGoogleList</span>(links, titles, selectedGoogleItemCallback(links, function(answers
+) {
+        ui.showAnswers(answers, function(index) {
+            var selected = answers[index];
+            if (selected) {
+                ui.showAnswer(selected);
+            }
+        });
+    }));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.ui.showGoogling" id="apidoc.element.how2.ui.showGoogling">
+        function <span class="apidocSignatureSpan">how2.ui.</span>showGoogling
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function showGoogling() {
+    var box = blessed.box({
+        content: 'Googling...'
+    });
+    screen.append(box);
+    screen.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.ui.start" id="apidoc.element.how2.ui.start">
+        function <span class="apidocSignatureSpan">how2.ui.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start() {
+    updates.checkForUpdates();
+
+    screen = blessed.screen({
+        smartCSR: true,
+        autoPadding: true
+    });
+
+    screen.key(['C-c'], function(ch, key) {
+        exit();
+    });
+
+    var logText =
+        colors.bgBlue.white.bold(' Enter/Space ')+' open link '+
+        colors.bgBlue.white.bold(' B ') + ' open browser '+
+        colors.bgBlue.white.bold(' Esc ') + ' close window';
+    logBox = blessed.box({
+        width: '100%',
+        top: '100%-1',
+        content: logText
+    });
+    screen.append(logBox);
+    screen.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+function search(text, lang, callback) {
+return searchGoogle(text, lang, callback);
+}
+
+function main(text, lang, remember) {
+ui.<span class="apidocCodeKeywordSpan">start</span>();
+spinner.start(spinnerOptions);
+
+function afterSearch(links, titles){
+    spinner.stop();
+    ui.showGoogleList(links, titles, selectedGoogleItemCallback(links, function(answers) {
+        ui.showAnswers(answers, function(index) {
+            var selected = answers[index];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.ui.stop" id="apidoc.element.how2.ui.stop">
+        function <span class="apidocSignatureSpan">how2.ui.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+    if(screen) {
+        screen.destroy();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+assert(parsedLink);
+var questionCriteria = {
+    filter: '!-*f(6s6U8Q9b'  // body_markdown and link
+};
+questionCriteria.site = parsedLink.site;
+context.questions.answers(questionCriteria, function(err, results){
+    if(err) {
+        ui.<span class="apidocCodeKeywordSpan">stop</span>();
+        log.error('Cannot fetch answers from Stackoverflow.');
+        log.error(err);
+        process.exit(1);
+    }
+    if(results.error_id) {
+        ui.stop();
+        console.error(results);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.how2.updates" id="apidoc.module.how2.updates">module how2.updates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.how2.updates.checkForUpdates" id="apidoc.element.how2.updates.checkForUpdates">
+        function <span class="apidocSignatureSpan">how2.updates.</span>checkForUpdates
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkForUpdates() {
+    var npmLatest = require('npm-latest');
+    var package = require('../package.json');
+    var colors = require('colors');
+    var semver = require('semver');
+
+    npmLatest('how2', { timeout: 1500 }, function (err, npm) {
+        if(err) {
+            console.error(err);
+            return;
+        }
+        if(semver.gt(npm.version, package.version)) {
+            checkResult = colors.yellow(
+                '\nA new version of how2 is available: '+npm.version+'\n'+
+                'Run '+colors.blue('npm update -g how2')+' to update.\n'
+            );
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if(msg) {
+    console.error(msg);
+}
+process.exit(0);
+}
+
+function start() {
+updates.<span class="apidocCodeKeywordSpan">checkForUpdates</span>();
+
+screen = blessed.screen({
+    smartCSR: true,
+    autoPadding: true
+});
+
+screen.key(['C-c'], function(ch, key) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.updates.getResult" id="apidoc.element.how2.updates.getResult">
+        function <span class="apidocSignatureSpan">how2.updates.</span>getResult
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getResult() {
+    return checkResult;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var screen;
+var googleList;
+var answersList;
+var logBox;
+
+function exit() {
+    screen.destroy();
+    var msg = updates.<span class="apidocCodeKeywordSpan">getResult</span>();
+    if(msg) {
+        console.error(msg);
+    }
+    process.exit(0);
+}
+
+function start() {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.how2.utils" id="apidoc.module.how2.utils">module how2.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.how2.utils.isValidGoogleLink" id="apidoc.element.how2.utils.isValidGoogleLink">
+        function <span class="apidocSignatureSpan">how2.utils.</span>isValidGoogleLink
+        <span class="apidocSignatureSpan">(link)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isValidGoogleLink(link) {
+    return parseStackoverflowQuestionId(link.link) !== null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.utils.marked" id="apidoc.element.how2.utils.marked">
+        function <span class="apidocSignatureSpan">how2.utils.</span>marked
+        <span class="apidocSignatureSpan">(src, opt, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function marked(src, opt, callback) {
+  if (callback || typeof opt === 'function') {
+    if (!callback) {
+      callback = opt;
+      opt = null;
+    }
+
+    opt = merge({}, marked.defaults, opt || {});
+
+    var highlight = opt.highlight
+      , tokens
+      , pending
+      , i = 0;
+
+    try {
+      tokens = Lexer.lex(src, opt)
+    } catch (e) {
+      return callback(e);
+    }
+
+    pending = tokens.length;
+
+    var done = function(err) {
+      if (err) {
+        opt.highlight = highlight;
+        return callback(err);
+      }
+
+      var out;
+
+      try {
+        out = Parser.parse(tokens, opt);
+      } catch (e) {
+        err = e;
+      }
+
+      opt.highlight = highlight;
+
+      return err
+        ? callback(err)
+        : callback(null, out);
+    };
+
+    if (!highlight || highlight.length &lt; 3) {
+      return done();
+    }
+
+    delete opt.highlight;
+
+    if (!pending) return done();
+
+    for (; i &lt; tokens.length; i++) {
+      (function(token) {
+        if (token.type !== 'code') {
+          return --pending || done();
+        }
+        return highlight(token.text, token.lang, function(err, code) {
+          if (err) return done(err);
+          if (code == null || code === token.text) {
+            return --pending || done();
+          }
+          token.text = code;
+          token.escaped = true;
+          --pending || done();
+        });
+      })(tokens[i]);
+    }
+
+    return;
+  }
+  try {
+    if (opt) opt = merge({}, marked.defaults, opt);
+    return Parser.parse(Lexer.lex(src, opt), opt);
+  } catch (e) {
+    e.message += '\nPlease report this to https://github.com/chjj/marked.';
+    if ((opt || marked.defaults).silent) {
+      return '&lt;p&gt;An error occured:&lt;/p&gt;&lt;pre&gt;'
+        + escape(e.message + '', true)
+        + '&lt;/pre&gt;';
+    }
+    throw e;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+googleList.select(0);
+googleList.focus();
+screen.render();
+}
+
+function makeTitleForAnswer(answer) {
+var withColors = utils.<span class="apidocCodeKeywordSpan">marked</span>(answer.body_markdown);
+
+var lines = withColors.split('\n');
+
+var firstLine;
+for(var i=0; i &lt; lines.length; i++) {
+    firstLine = lines[i];
+    if(firstLine !== '') break;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.utils.parseStackoverflowQuestionId" id="apidoc.element.how2.utils.parseStackoverflowQuestionId">
+        function <span class="apidocSignatureSpan">how2.utils.</span>parseStackoverflowQuestionId
+        <span class="apidocSignatureSpan">(link)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseStackoverflowQuestionId(link) {
+    var re,
+        matches;
+    if(link.indexOf('stackoverflow.com') !== -1) {
+        re = /.*stackoverflow.com\/questions\/(\d+)\//;
+        matches = re.exec(link);
+        if(!matches || matches.length &lt; 2) return null;
+        if(matches) {
+            return {
+                site: 'stackoverflow',
+                questionId: matches[1]
+            };
+        }
+    }
+    else if(link.indexOf('stackexchange.com') !== -1) {
+        re = /.*\/\/(.*).stackexchange.com\/questions\/(\d+)\//;
+        matches = re.exec(link);
+        if(!matches || matches.length &lt; 3) return null;
+        return {
+            site: matches[1],
+            questionId: matches[2]
+        };
+    }
+    else return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function selectedGoogleItemCallback(links, callback) {
+return function(index) {
+    if(links.length === 0) {
+        log.error('Sorry, I cannot find any reasonable answer for your query.');
+        process.exit(1);
+    }
+    var selectedLink = links[index];
+    var parsedLink = utils.<span class="apidocCodeKeywordSpan">parseStackoverflowQuestionId</span>(selectedLink.link);
+    fetchQuestionAnswers(parsedLink, callback);
+};
+}
+
+function fetchQuestionAnswers(parsedLink, callback) {
+assert(parsedLink);
+var questionCriteria = {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.utils.stripStackOverflow" id="apidoc.element.how2.utils.stripStackOverflow">
+        function <span class="apidocSignatureSpan">how2.utils.</span>stripStackOverflow
+        <span class="apidocSignatureSpan">(title)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stripStackOverflow(title) {
+    var split = title.split(' - ');
+    if(split.length === 3) {
+        split.pop();
+        return split.join(' - ');
+    }
+    if(split.length === 2) {
+        var last = _.last(split);
+        if(last.indexOf('Stack') !== -1 || last.indexOf('Unix') !== -1) {
+            split.pop();
+            return split.join('-');
+        }
+    }
+    return title;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+        links = links.filter(function(link) {
+            return link.title !== '';
+        })
+        .filter(utils.isValidGoogleLink);
+
+        var strippedTitles = links.map(function(link) {
+            var title = utils.<span class="apidocCodeKeywordSpan">stripStackOverflow</span>(link.title);
+            return title;
+        });
+
+        callback(links, strippedTitles);
+
+    });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.how2.utils.toEscapedMarkdown" id="apidoc.element.how2.utils.toEscapedMarkdown">
+        function <span class="apidocSignatureSpan">how2.utils.</span>toEscapedMarkdown
+        <span class="apidocSignatureSpan">(markdown)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toEscapedMarkdown(markdown) {
+     return htmlentities.decode(marked(markdown));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log('To get the best answers, make sure you specify the language with '+ colors.blue('-l:'));
+        console.log('example: $ how2 '+colors.blue('-l python') +' permutations list');
+        console.log('example: $ how2 '+colors.blue('-l ruby') + ' permutations list');
+    }
+    process.exit(1);
+}
+
+var markdown = utils.<span class="apidocCodeKeywordSpan">toEscapedMarkdown</span>(answers[index].body_markdown);
+
+var title = titles[index];
+console.log(colors.underline.green(title+'\n'));
+console.log(markdown);
+
+console.log('Press SPACE for more choices, any other key to quit.');
+require('keypress')(process.stdin);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
